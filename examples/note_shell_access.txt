@@ -1,0 +1,3 @@
+#access to shell via mininet
+
+sudo mnexec -a $(ps aux | grep 'mininet:h1' | grep root | awk '{ print $2 }') bash
