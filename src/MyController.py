@@ -178,14 +178,20 @@ class Project10Controller(app_manager.RyuApp):
                                 match=match, instructions=inst)
         datapath.send_msg(mod)
 
-    @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
+   @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def packet_handler(self, ev):
         msg = ev.msg
         dp = msg.datapath
         dpid = dp.id
+        parser = dp.ofproto_parser
+        in_port = msg.match['in_port']
+
         pkt = packet.Packet(msg.data)
         eth = pkt.get_protocols(ethernet.ethernet)[0]
-        in_port = msg.match['in_port']
+
+        # Ignora pacchetti LLDP o IPv6 per pulizia log
+        if eth.ethertype in [0x88cc, 0x86dd]:
+            return
 
         if eth.ethertype == 0x0806: 
             self._handle_arp(dp, in_port, pkt)
@@ -196,81 +202,74 @@ class Project10Controller(app_manager.RyuApp):
             src_ip, dst_ip = ip_pkt.src, ip_pkt.dst
             if dst_ip not in self.host_map: return
 
-            src_sw = dpid
             dst_sw, final_port = self.host_map[dst_ip]
+            
+            # Recuperiamo il MAC reale dell'host di destinazione (00:00:00:00:00:0X)
+            dst_mac = f"00:00:00:00:00:0{dst_ip.split('.')[-1][-1]}" # Prende l'ultima cifra dell'IP
+            
+            # Calcoliamo il percorso A* dallo switch attuale alla destinazione
+            path = dijkstra(dpid, dst_sw)
+            if not path: return
 
-            # Gestione caso Sorgente e Destinazione sullo stesso switch
-            if src_sw == dst_sw:
-                path = [src_sw]
-                out_port_current_sw = final_port
-            else:
-                path = self.a_star(src_sw, dst_sw) # o dijkstra
-                if not path: return
-                next_sw = path[1]
-                out_port_current_sw = self.adj[src_sw][next_sw]
+            self.logger.info(f"ROUTE L3: {src_ip} -> {dst_ip} | Path: {path} | Set DstMAC: {dst_mac}")
 
-            self.logger.info(f"Percorso {src_ip} -> {dst_ip}: {path}")
-
-            # Installazione flussi su TUTTI gli switch del percorso
+            # Installiamo i flussi su tutti gli switch del percorso
             for i in range(len(path)):
                 sw_id = path[i]
                 if sw_id not in self.datapaths: continue
                 sw_dp = self.datapaths[sw_id]
-                parser = sw_dp.ofproto_parser
                 
+                # Uscita verso lo switch successivo o verso l'host finale
+                p_out = final_port if sw_id == dst_sw else self.adj[sw_id][path[i+1]]
+                
+                # AZIONI: Se siamo sull'ultimo switch, cambiamo il MAC di destinazione con quello dell'host
+                actions = []
                 if sw_id == dst_sw:
-                    p_out = final_port
-                else:
-                    p_out = self.adj[sw_id][path[i+1]]
-
-                match = parser.OFPMatch(eth_type=0x0800, ipv4_dst=dst_ip)
-                actions = [parser.OFPActionOutput(p_out)]
+                    actions.append(sw_dp.ofproto_parser.OFPActionSetField(eth_dst=dst_mac))
+                
+                actions.append(sw_dp.ofproto_parser.OFPActionOutput(p_out))
+                
+                # Installazione regola per questo IP di destinazione
+                match = sw_dp.ofproto_parser.OFPMatch(eth_type=0x0800, ipv4_dst=dst_ip)
                 self.add_flow(sw_dp, 10, match, actions)
 
-            # IMPORTANTE: Invia il pacchetto che ha causato il PacketIn
-            parser = dp.ofproto_parser
-            actions = [parser.OFPActionOutput(out_port_current_sw)]
+            # Inoltro immediato del pacchetto corrente
+            # Applichiamo il cambio MAC anche qui se siamo già sullo switch finale
+            out_actions = []
+            if dpid == dst_sw:
+                out_actions.append(parser.OFPActionSetField(eth_dst=dst_mac))
+            
+            out_port = final_port if dpid == dst_sw else self.adj[dpid][path[1]]
+            out_actions.append(parser.OFPActionOutput(out_port))
+            
             out = parser.OFPPacketOut(datapath=dp, buffer_id=msg.buffer_id,
-                                      in_port=in_port, actions=actions, data=msg.data)
+                                      in_port=in_port, actions=out_actions, data=msg.data)
             dp.send_msg(out)
 
     def _handle_arp(self, datapath, in_port, pkt):
         arp_pkt = pkt.get_protocol(arp.arp)
-        dpid = datapath.id
-        parser = datapath.ofproto_parser
+        if arp_pkt.opcode != arp.ARP_REQUEST:
+            return
 
-        if arp_pkt.opcode == arp.ARP_REQUEST:
-            # Proxy ARP: Il controller risponde al posto dell'host
-            target_ip = arp_pkt.dst_ip
-            if target_ip in self.host_map:
-                # Recuperiamo il MAC corretto dell'host (dalla topologia)
-                # In Mininet H1 è 00:00:00:00:00:01, H2 è ...:02, ecc.
+        target_ip = arp_pkt.dst_ip
+        # Rispondi se è un host noto O se è un gateway (.254)
+        if target_ip in self.host_map or target_ip.endswith('.254'):
+            # Se è un gateway, diamo un MAC fittizio fisso
+            if target_ip.endswith('.254'):
+                target_mac = "00:00:00:00:00:FE"
+            else:
                 last_digit = target_ip.split('.')[-1]
                 target_mac = f"00:00:00:00:00:0{last_digit}"
-                
-                self.logger.info(f"ARP Request per {target_ip} su SW{dpid}: Rispondo con {target_mac}")
-                
-                pkt_reply = packet.Packet()
-                pkt_reply.add_protocol(ethernet.ethernet(
-                    ethertype=0x0806, dst=arp_pkt.src_mac, src=target_mac))
-                pkt_reply.add_protocol(arp.arp(
-                    opcode=arp.ARP_REPLY, src_mac=target_mac, src_ip=target_ip,
-                    dst_mac=arp_pkt.src_mac, dst_ip=arp_pkt.src_ip))
-                pkt_reply.serialize()
-                
-                actions = [parser.OFPActionOutput(in_port)]
-                out = parser.OFPPacketOut(datapath=datapath, buffer_id=0xffffffff,
-                                          in_port=datapath.ofproto.OFPP_CONTROLLER,
-                                          actions=actions, data=pkt_reply.data)
-                datapath.send_msg(out)
 
-        elif arp_pkt.opcode == arp.ARP_REPLY:
-            # Se è una risposta, dobbiamo inoltrarla verso la destinazione corretta
-            dst_ip = arp_pkt.dst_ip
-            if dst_ip in self.host_map:
-                target_sw, out_port = self.host_map[dst_ip]
-                if dpid == target_sw:
-                    actions = [parser.OFPActionOutput(out_port)]
-                    out = parser.OFPPacketOut(datapath=datapath, buffer_id=0xffffffff,
-                                              in_port=in_port, actions=actions, data=pkt.data)
-                    datapath.send_msg(out)
+            self.logger.info(f"ARP Request per {target_ip} (SW{datapath.id}): Rispondo con {target_mac}")
+            
+            pkt_reply = packet.Packet()
+            pkt_reply.add_protocol(ethernet.ethernet(ethertype=0x0806, dst=arp_pkt.src_mac, src=target_mac))
+            pkt_reply.add_protocol(arp.arp(opcode=arp.ARP_REPLY, src_mac=target_mac, src_ip=target_ip,
+                                          dst_mac=arp_pkt.src_mac, dst_ip=arp_pkt.src_ip))
+            pkt_reply.serialize()
+            
+            actions = [datapath.ofproto_parser.OFPActionOutput(in_port)]
+            out = datapath.ofproto_parser.OFPPacketOut(datapath=datapath, buffer_id=0xffffffff,
+                                  in_port=datapath.ofproto.OFPP_CONTROLLER, actions=actions, data=pkt_reply.data)
+            datapath.send_msg(out)
