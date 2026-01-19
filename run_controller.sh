@@ -1,0 +1,1 @@
+sudo sdn_env/bin/python sdn_env/bin/ryu-manager --observe-links controller.py

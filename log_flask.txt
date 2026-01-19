@@ -1,0 +1,847 @@
+ * Serving Flask app 'flask_server'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://10.0.0.1:80
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 340-815-529
+10.0.0.2 - - [19/Jan/2026 22:59:26] "POST /start_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 22:59:42] "POST /stop_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 22:59:43] "POST /start_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 22:59:44] "POST /start_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 23:00:00] "POST /stop_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 23:00:00] "POST /stop_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 23:00:01] "POST /start_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 23:00:02] "POST /start_iperf HTTP/1.1" 200 -
+192.168.1.1 - - [19/Jan/2026 23:00:04] "POST /start_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 23:00:20] "POST /stop_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 23:00:20] "POST /stop_iperf HTTP/1.1" 200 -
+192.168.1.1 - - [19/Jan/2026 23:00:21] "POST /stop_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 23:00:21] "POST /start_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 23:00:22] "POST /start_iperf HTTP/1.1" 200 -
+192.168.1.1 - - [19/Jan/2026 23:00:24] "POST /start_iperf HTTP/1.1" 200 -
+10.8.1.1 - - [19/Jan/2026 23:00:32] "POST /start_iperf HTTP/1.1" 200 -
+10.0.0.2 - - [19/Jan/2026 23:00:48] "POST /stop_iperf HTTP/1.1" 200 -
+11.0.0.1 - - [19/Jan/2026 23:00:49] "POST /stop_iperf HTTP/1.1" 200 -
+192.168.1.1 - - [19/Jan/2026 23:00:49] "POST /stop_iperf HTTP/1.1" 200 -
+10.8.1.1 - - [19/Jan/2026 23:00:50] "POST /stop_iperf HTTP/1.1" 200 -
+ * Detected change in '/home/frax/code/python/progettoreti/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 141-917-223
+ * Detected change in '/home/frax/code/python/progettoreti/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 154-688-537
+ * Detected change in '/home/frax/code/python/progettoreti/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 751-832-197
+ * Detected change in '/home/frax/code/python/progettoreti/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 136-180-296
+ * Detected change in '/home/frax/code/python/progettoreti/topology.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 895-178-697
+ * Detected change in '/home/frax/code/python/progettoreti/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 106-574-089
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 643-510-520
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 893-220-872
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-605-988
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 550-831-151
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-572-040
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 126-103-163
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 671-005-695
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 336-394-182
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 597-943-324
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 675-189-374
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-713-921
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 141-438-429
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-266-794
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-643-408
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 944-032-244
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 908-012-070
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 146-057-407
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 721-985-478
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 325-914-056
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 382-513-160
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 703-562-100
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 701-816-627
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-988-936
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 927-503-991
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 726-814-501
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-117-699
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 444-903-245
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 651-212-609
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 417-380-436
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 463-737-786
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-646-169
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 897-718-640
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 105-443-332
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 189-015-298
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 384-754-052
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 808-350-465
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 127-309-066
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 141-933-178
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 572-295-577
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 378-675-873
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 884-623-099
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 467-648-468
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 165-633-649
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 996-525-190
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 297-374-418
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 125-423-790
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 617-156-813
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 145-476-382
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-903-867
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 288-924-919
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 515-143-095
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 991-400-657
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 151-600-230
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 109-894-293
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 104-641-232
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 551-949-450
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 189-843-307
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 903-091-669
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-266-528
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 367-763-940
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 189-298-810
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-484-831
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 102-456-472
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 595-782-955
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 123-649-763
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 402-913-029
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-293-832
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 617-880-657
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 251-872-262
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 248-254-642
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 128-034-488
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 114-314-063
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 253-535-837
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 120-106-270
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 795-530-336
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 133-668-482
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 612-117-676
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 414-959-986
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 972-124-138
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 679-662-972
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 745-247-007
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 599-750-479
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 383-870-420
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 116-842-785
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 108-395-914
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 680-727-591
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 123-956-926
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 142-468-844
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 103-392-945
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 369-038-110
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 347-637-340
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 123-948-681
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 979-093-121
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 134-818-918
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 128-774-121
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 525-459-258
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 620-218-920
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 108-009-814
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 726-569-919
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-372-626
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 133-701-139
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 925-385-630
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 813-007-922
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 351-572-416
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-631-372
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 416-570-075
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 133-151-709
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 130-889-936
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 664-102-651
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 571-810-379
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 724-877-990
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 121-720-582
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 140-726-141
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 496-126-408
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 460-814-113
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 121-892-389
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 135-822-074
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 592-544-763
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 136-482-984
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-656-228
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 655-847-351
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-112-254
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-242-014
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 862-646-371
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 404-375-268
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 184-700-011
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 107-011-971
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 136-344-593
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 121-205-501
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 923-687-495
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 130-375-096
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 114-253-393
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 823-017-940
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 128-812-818
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 669-904-214
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 110-422-587
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 987-327-295
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 181-059-350
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 309-421-920
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-133-159
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 397-005-276
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-523-655
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 139-564-662
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 134-121-853
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 113-553-767
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 724-203-139
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-867-906
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 122-877-655
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 602-347-271
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-857-961
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 997-251-469
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 688-387-426
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 541-042-456
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 142-326-425
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 160-474-641
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 395-711-616
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 138-904-844
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 349-276-537
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 397-761-945
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 772-040-761
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 727-710-535
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 473-127-086
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 825-362-691
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 781-863-319
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 111-867-003
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 123-124-326
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 540-457-976
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 134-244-698
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 555-900-759
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-532-300
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 427-352-544
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 114-802-626
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 492-054-736
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-645-459
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 133-993-540
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 119-577-266
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-633-014
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 838-792-850
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 734-102-311
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 651-651-533
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 442-005-941
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 869-870-229
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 119-498-483
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 232-948-068
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 106-130-422
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 975-383-609
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 140-472-478
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 114-989-478
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 417-678-172
+ in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 918-059-135
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 587-442-199
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 959-379-385
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 435-037-232
+PIN: 687-003-737
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 221-497-790
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 131-601-435
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 124-441-581
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 294-955-797
+ * Detected change in '/home/frax/code/python/progettoreti/print_throughput.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 495-269-401
